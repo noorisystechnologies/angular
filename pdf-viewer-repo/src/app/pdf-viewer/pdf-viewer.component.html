@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="card mt-5">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-4">
+                    <form [formGroup]="pdf_form" (ngSubmit)="save()">
+                        <div class="form-group">
+                            <label>Upload PDF</label>
+                            <input type="file" class="form-control" formControlName="pdf" accept=".pdf"
+                                (change)="get_pdf($event)">
+                            <ng-container class="invalid"
+                                *ngIf="pdf_form.get('pdf')?.hasError('required') && (pdf_form.get('pdf')?.touched || pdf_form.get('pdf')?.dirty)">
+                                <small class="text-danger" translate>Please select pdf</small>
+                            </ng-container>
+                        </div>
+                        <button *ngIf="show_result !== true" type="submit" class="btn btn-primary float-end mt-2 mb-2 w-100">Save</button>
+                        <button *ngIf="show_result == true" type="button" class="btn btn-danger float-end mt-2 mb-2 w-100" (click)="clear()">Reset</button>
+                    </form>
+                </div>
+                <ng-container *ngIf="show_result == true">
+                    <div class="col-md-6">
+                        <div class="card text-center">
+                            <div class="card-header">PDF Viewer</div>
+                            <div class="card-body">
+                                <pdf-viewer [src]="pdf_result" [render-text]="true" [original-size]="false"
+                                    class="pdf-style" (click)="open_pdf(pdfModal)" [zoom]="0.9"></pdf-viewer>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #pdfModal let-modal>
+    <!-- Select2 modal -->
+    <div class="modal-header">
+        <h6 class="modal-title" translate>Pdf Viewer</h6>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <pdf-viewer [src]="pdf_result" [render-text]="true" [original-size]="false" [zoom]="0.9"
+        style="width: 100%; min-height: 500px"></pdf-viewer>
+    </div>
+</ng-template>
