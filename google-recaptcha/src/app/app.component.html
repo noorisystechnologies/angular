@@ -1,0 +1,8 @@
+<h1>Google reCaptcha</h1>
+
+<form [formGroup]="aFormGroup">
+  <ngx-recaptcha2 #captchaElem
+    [siteKey]="siteKey"
+    formControlName="recaptcha">
+  </ngx-recaptcha2>
+</form>
