@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="col-md-4 me-auto my-2">
+       <input type="text" [(ngModel)]="query" class="form-control" placeholder="Search ">
+    </div>
+    <table class="table">
+       <thead>
+          <tr>
+             <th scope="col">Title</th>
+             <th scope="col">First</th>
+             <th scope="col">Last</th>
+             <th scope="col">Gender</th>
+             <th scope="col">Age</th>
+             <th scope="col">Email</th>
+          </tr>
+       </thead>
+       <tbody>
+          <tr *ngFor="let x of ( users | sort: 'first' | search: query)">
+             <th scope="row">{{x.title}}</th>
+             <td>{{x.first}}</td>
+             <td>{{x.last}}</td>
+             <td>{{x.gender}}</td>
+             <td>{{x.age}}</td>
+             <td>{{x.email}}</td>
+          </tr>
+       </tbody>
+    </table>
+ </div>
