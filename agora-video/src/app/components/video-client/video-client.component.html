@@ -1,0 +1,14 @@
+<div class="container">
+    <label> Agora Sample Video Call :</label><br />
+    <button class="btn btn-success" type="button" (click)="joinCall()" id="join">Start</button>
+    <button class="btn btn-danger ml-2" type="button" (click)="leaveCall()" id="leave">Stop</button>
+    <p>&nbsp;</p>
+    <div class="row">
+        <div class="col">
+            <div [id]="remoteCallId" class="remote">
+                <div [id]="localCallId" class="local">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
