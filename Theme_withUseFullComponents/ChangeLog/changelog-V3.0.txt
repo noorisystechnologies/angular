@@ -1,0 +1,52 @@
+
+Project Name: Spruha - Angular admin dashboard.
+
+Version : V.3
+
+Release Date: January 19,2022.
+
+Update Details:
+
+1) Updated Angular version from 12.2.0 - 13.1.1.
+
+
+***************************************************************************************************************************
+
+1) Updated Angular version from 12.2.0 - 13.1.1 :
+------------------------------------------------
+
+   Process to convert Angular13
+
+	> npm install --save-dev @angular/cli@latest 
+	 It is used to update devDependencies
+
+	> ng update
+	 It will show the required dependencies which should need to be updated.
+		// Make sure that your global version is updated
+
+		use --force to ignore peer dependency version mismatches.
+		use --next for the prerelease version, including beta and RCs.
+
+	> npm i @angular/cdk
+	 It is used to update the angular cdk
+	
+
+    To Update 3rd party PlugIns just replace the package.json file and use CMD:
+
+	1) npm i
+		or
+	2) yarn install
+
+	Note: Some of the 3rd party plugins wont support latest version. So, Please use --force > npm install --force
+
+
+	> npm install bootstrap@latest --save
+
+    - To update angular bootstrap
+	> npm i @ng-bootstrap/ng-bootstrap@latest
+
+
+***************************************************************************************************************************
+
+
+				   ***Thank You***

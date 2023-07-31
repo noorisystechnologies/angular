@@ -1,0 +1,10 @@
+Changelog_01 
+Date:07-May-2021
+
+
+*************************************************
+1) "Calendar" Onclick Event Issue Fixed.
+
+ Please check screenshot 01.PNG and 02.PNG
+
+

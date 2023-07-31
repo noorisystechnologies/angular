@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta data -->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+    <meta name="Description" content="Spruha - Angular Admin & Dashboard Template">
+    <meta name="author" content="Spruko Technologies Private Limited">
+	<meta name="keywords"  content="admin, dashboard, angular admin panel, angular admin dashboard, dashboard in angular, angular admin, admin dashboard angular, dashboard template angular, admin panel angular, angular bootstrap dashboard, best angular admin template, dashboard using angular, admin panel in angular, template dashboard angular, angular bootstrap admin, spruha, spruha admin, spruha admin template, dashboard, template, admin template">
+    <!-- TITLE -->
+    <title>Spruha - Angular Admin & Dashboard Template</title>
+
+<link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+<link href="assets/plugins/iconfonts/icons.css" rel="stylesheet" />
+<!-- Custom Css -->
+<link href="assets/css/main.css" rel="stylesheet">
+<!---Internal  Prism css-->
+<link href="assets/plugins/prism/prism.css" rel="stylesheet">
+<link href="assets/plugins/treeview-prism/prism.css" rel="stylesheet">
+<link href="assets/plugins/treeview-prism/prism-treeview.css" rel="stylesheet">
+<link href="assets/css/themes/all-themes.css" rel="stylesheet" />
+</head>
+
+<body class="theme-blush">
+<!-- Page Loader -->
+<div class="page-loader-wrapper">
+    <div class="loader">
+        <div class="preloader">
+            <div class="spinner-layer pl-blush">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- #END# Page Loader -->
+
+<!-- Overlay For Sidebars -->
+<div class="overlay"></div>
+<!-- #END# Overlay For Sidebars -->
+
+
+<!-- #Top Bar -->
+<section>
+    <!-- Left Sidebar -->
+    <aside id="leftsidebar" class="sidebar">
+        <!-- User Info -->
+        <div class="admin-image"> <img src="assets/images/logo-white.png" alt="" > </div>
+        <!-- Menu -->
+        <div class="menu main-sidebar">
+			<ul class="list" id="documenter_nav">
+				<li class="nav-item">
+					<a class="nav-link" href="index.html"><i class="fe fe-airplay sidemenu-icon"></i><span class="sidemenu-label">Introduction</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="credits.html"><i class="fe fe-airplay sidemenu-icon"></i><span class="sidemenu-label">Credits</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="getting-started.html"><i class="fe fe-download sidemenu-icon"></i><span class="sidemenu-label">Getting Started</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="folder-structure.html"><i class="fe fe-code sidemenu-icon"></i><span class="sidemenu-label">Folder Structure</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="styles-customization.html"><i class="fe fe-file-text sidemenu-icon"></i><span class="sidemenu-label">Style Customization</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="layouts.html"><i class="fe fe-layout sidemenu-icon"></i><span class="sidemenu-label">Layouts</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="loader.html"><i class="fe fe-aperture  sidemenu-icon"></i><span class="sidemenu-label">Loader</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="router.html"><i class="fe fe-navigation sidemenu-icon"></i><span class="sidemenu-label">Router</span></a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="file-generate.html"><i class="fe fe-file-plus sidemenu-icon"></i><span class="sidemenu-label">File Generate</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="deployment.html"><i class="fe fe-database sidemenu-icon"></i><span class="sidemenu-label">Deployment</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="others.html"><i class="fe fe-link sidemenu-icon"></i><span class="sidemenu-label">Others</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="faqs.html"><i class="fe fe-help-circle sidemenu-icon"></i><span class="sidemenu-label">Faqs</span></a>
+				</li>
+			</ul>
+		</div>
+        <!-- #Menu -->
+    </aside>
+    <!-- #END# Left Sidebar -->
+</section>
+
+
+<section class="content home">
+    <div class="container-fluid">
+		<div class="row clearfix">
+			<div class="block-header mt-3 ml-3">
+				<h1>Spruha - Angular Admin & Dashboard Template</h1>
+			</div>
+			<div class="col-sm-9">
+				<div class="row clearfix">
+					<div class="col-sm-12 ">
+						<div class="card section" id="About">
+							<div class="body">
+								<h5 class="mt-0 mb-2">Styles Customization</h5>
+								<div id="documenter_buttons">
+								</div>
+								<h6 class="mt-4">Styles Usage</h6>
+								<hr class="m-0">
+								<p>
+									Spruha Admin manages all scss/css, images, json data files in
+									<code>assets/</code> folder and
+									it also allows users to add their own scss files inside assests folder.
+									<br>
+									Plugins CSS can be found under the <code>src/assets/plugins</code> folder.
+								</p>
+								<h6>SCSS files structure for Admitro assets</h6>
+								<hr class="m-0">
+								<pre class="language-treeview">
+<code class="language-treeview">assets/
+|   ├── css
+|   ├── img
+|   ├── maps
+|   ├── plugins
+|   ├── scss
+|   |   ├── bootstrap
+|   |   ├── custom
+|   |   ├── layouts
+|   |   ├── lib
+|   |   ├── template
+|   |   ├── util
+|   |   ├── _variables.scss
+|   |   ├── style.scss
+|   ├── .gitkeep
+|   └── app_styles.scss
+</code></pre>
+								<p>
+									Following is the details of what all scss folders.
+								</p>
+								<table class="table">
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>Folders/File</th>
+											<th>Details</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>bootstrap</td>
+											<td>
+												<code>bootstrap/</code> folder contain Bootstrap 4.5.0 core scss
+												files, that are customized for the Spruha Dashboard.
+											</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>custom</td>
+											<td>
+												<code>custom/</code> folder contain scss files used for custom-styles, images, list, navbar, ratings, tabs, scroller, toggle.., which are customized for the Spruha Dashboard.
+											</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>layouts</td>
+											<td>
+												<code>layouts/</code> folder contain scss files used for footer, header, right-sidebar,  profile, iconbar, main-content .., which are customized for the Spruha
+												Dashboard.
+											</td>
+											
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>lib</td>
+											<td>
+												<code>lib/</code> folder contain scss files used for charts, spinner,date-picker.., which are customized for the Spruha Dashboard.
+											</td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td>template</td>
+											<td>
+												<code>template/</code> folder contain scss files used in pages
+												components like for calendar, chat, contacts, crypto currencies, ecommerce, errors, mail.., which are customized for the Spruha Dashboard.
+											</td>
+										</tr>
+										<tr>
+											<td>6</td>
+											<td>util</td>
+											<td>
+												<code>util/</code> folder contain scss files used in pages
+												components like for backgrounds, borders, heights, amrgins, position.., which are
+												customized for the Spruha Dashboard.
+											</td>
+										</tr>
+										<tr>
+											<td>7</td>
+											<td>_variables.scss</td>
+											<td>
+												<code>_variables.scss</code> file contain default color variables
+												which are customized for the Spruha Dashboard.
+											</td>
+										</tr>
+										<tr>
+											<td>8</td>
+											<td>_style.scss</td>
+											<td>
+												<code>style.scss</code> file is the main scss file that contain the
+												all scss import files which are customized for the Spruha
+												Dashboard.
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- Footer opened -->
+	<div class="main-footer ht-40">
+		<div class="container-fluid pd-t-0-f ht-100p">
+			<span> Copyright © 2021 <a href="#">Zenax</a>. Designed with <span class="fa fa-heart text-danger"></span> by <a href="https://www.spruko.com/">Spruko</a> All rights reserved.</span>
+		</div>
+	</div>
+	<!-- Footer closed -->
+</section>
+
+<div class="color-bg">
+	<ul class="nav navbar-nav">
+	  <li class="nav-item mr-2"><a class="btn btn-primary " href="mailto:support@spruko.com" target="_blank"><i class="icon-help2"></i> Support</a></li>
+	  <li class="nav-item"><a class="btn btn-warning mr-3" href="https://1.envato.market/MGEaN"><i class="icon-bag3"></i> Portfolio</a></li>
+	</ul>
+</div>
+
+<!-- Jquery Core Js -->
+<script src="assets/bundles/libscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js -->
+<script src="assets/bundles/morphingsearchscripts.bundle.js"></script> <!-- morphing search Js -->
+<script src="assets/bundles/vendorscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js -->
+<script src="assets/bundles/mainscripts.bundle.js"></script><!-- Custom Js -->
+
+<!-- Internal Prism js-->
+<script src="assets/plugins/prism/prism.js"></script>
+
+
+<!-- Treeview js-->
+<script src="assets/plugins/treeview-prism/prism.js"></script>
+<script src="assets/plugins/treeview-prism/prism-treeview.js"></script>
+
+<!-- Perfectscroll js-->
+<script src="assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<script src="assets/plugins/perfect-scrollbar/p-scroll.js"></script>
+
+<!-- Custom js-->
+<script src="assets/js/custom.js"></script>
+<script src="assets/js/menuspy.min.js.js"></script>
+
+<script>
+    var elm = document.querySelector('#main-menu');
+    var ms = new MenuSpy(elm);
+
+	(function () {
+
+	if (typeof self === 'undefined' || !self.Prism || !self.document) {
+		return;
+	}
+
+	/**
+	 * Class name for <pre> which is activating the plugin
+	 * @type {String}
+	 */
+	var PLUGIN_CLASS = 'line-numbers';
+
+	/**
+	 * Resizes line numbers spans according to height of line of code
+	 * @param  {Element} element <pre> element
+	 */
+	var _resizeElement = function (element) {
+		var codeStyles = getStyles(element);
+		var whiteSpace = codeStyles['white-space'];
+
+		if (whiteSpace === 'pre-wrap' || whiteSpace === 'pre-line') {
+			var codeElement = element.querySelector('code');
+			var lineNumbersWrapper = element.querySelector('.line-numbers-rows');
+			var lineNumberSizer = element.querySelector('.line-numbers-sizer');
+			var codeLines = element.textContent.split('\n');
+
+			if (!lineNumberSizer) {
+				lineNumberSizer = document.createElement('span');
+				lineNumberSizer.className = 'line-numbers-sizer';
+
+				codeElement.appendChild(lineNumberSizer);
+			}
+
+			lineNumberSizer.style.display = 'block';
+
+			codeLines.forEach(function (line, lineNumber) {
+				lineNumberSizer.textContent = line || '\n';
+				var lineSize = lineNumberSizer.getBoundingClientRect().height;
+				lineNumbersWrapper.children[lineNumber].style.height = lineSize + 'px';
+			});
+
+			lineNumberSizer.textContent = '';
+			lineNumberSizer.style.display = 'none';
+		}
+	};
+
+	/**
+	 * Returns style declarations for the element
+	 * @param {Element} element
+	 */
+	var getStyles = function (element) {
+		if (!element) {
+			return null;
+		}
+
+		return window.getComputedStyle ? getComputedStyle(element) : (element.currentStyle || null);
+	};
+
+	window.addEventListener('resize', function () {
+		Array.prototype.forEach.call(document.querySelectorAll('pre.' + PLUGIN_CLASS), _resizeElement);
+	});
+
+	Prism.hooks.add('complete', function (env) {
+		if (!env.code) {
+			return;
+		}
+
+		// works only for <code> wrapped inside <pre> (not inline)
+		var pre = env.element.parentNode;
+		// Original regex check for class, leaving it here
+		// for its redundancy check
+		var clsReg = /\s*\bline-numbers\b\s*/;
+		// New regex check for opt-out class
+		var clsRegB = /\s*\bno-line-numbers\b\s*/;
+
+		if (env.element.querySelector(".line-numbers-rows")) {
+			// Abort if line numbers already exists
+			return;
+		}
+
+		// Added to facilitate opting out
+		if (clsRegB.test(pre.className)) {
+			// Respect the opt-out
+			return;
+		}
+
+		if (clsReg.test(env.element.className)) {
+			// Remove the class "line-numbers" from the <code>
+			env.element.className = env.element.className.replace(clsReg, ' ');
+		}
+		if (!clsReg.test(pre.className)) {
+			// Add the class "line-numbers" to the <pre>
+			pre.className += ' line-numbers';
+		}
+
+		var match = env.code.match(/\n(?!$)/g);
+		var linesNum = match ? match.length + 1 : 1;
+		var lineNumbersWrapper;
+
+		var lines = new Array(linesNum + 1);
+		lines = lines.join('<span></span>');
+
+		lineNumbersWrapper = document.createElement('span');
+		lineNumbersWrapper.setAttribute('aria-hidden', 'true');
+		lineNumbersWrapper.className = 'line-numbers-rows';
+		lineNumbersWrapper.innerHTML = lines;
+
+		if (pre.hasAttribute('data-start')) {
+			pre.style.counterReset = 'linenumber ' + (parseInt(pre.getAttribute('data-start'), 10) - 1);
+		}
+
+		env.element.appendChild(lineNumbersWrapper);
+
+		_resizeElement(pre);
+	});
+
+}());
+</script>
+
+
+</body>
+</html>

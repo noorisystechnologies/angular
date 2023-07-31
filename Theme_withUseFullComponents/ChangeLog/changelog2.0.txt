@@ -1,0 +1,103 @@
+
+Project Name: Spruha - Angular admin dashboard.
+
+Version : V.2
+
+Release Date: November 01,2021.
+
+Update Details:
+
+1) Updated Angular version from 11 - 12.2.0.
+
+2) Updated scss files. Converted dual scss files to single scss files(scss & scss-rtl to scss).
+
+3) Updated Bootstrap version(4 - 5.1.4).
+
+4) Added boxed layout for both Vertical and Horizontal.
+
+5) Removed simple-datatables.
+
+***************************************************************************************************************************
+
+---------------------------------------------
+1) Updated Angular version from 11 - 12.2.0 :-
+---------------------------------------------
+   Process to convert Angular12
+
+	> ng update @angular/core@latest @angular/cli@latest 
+	 It will update angular previous version to angular latest version12.2.0
+
+		use --force to ignore peer dependency version mismatches.
+		use --next for the prerelease version, including beta and RCs.
+
+	> ng update @angular/material 
+	 It is used to update angular material version to latest version
+
+	> ng update
+	 It is used to update the typescript version
+
+	> npm i @angular/cdk
+	 It is used to update the angular cdk
+	
+
+
+    To Update 3rd party PlugIns just replace the package.json file and use CMD:
+
+	1) npm i
+		or
+	2) yarn install
+
+
+***************************************************************************************************************************
+
+
+------------------------------------------------------------------------------------------------
+2) Updated scss files. Converted dual scss files to single scss files(scss & scss-rtl to scss) :-
+-------------------------------------------------------------------------------------------------
+
+    Converted Seperate SCSS(SCSS and SCSS-RTL) files to single SCSS file.
+
+
+***************************************************************************************************************************
+
+
+-----------------------------------------
+3) Updated Bootstrap version(4 - 5.1.4) :-
+-----------------------------------------
+
+    Updated bootstrap version from 4 to 5.1.3.
+    Update angular bootstrap to ^10.0.0.
+
+    - To update bootstrap
+	> npm install bootstrap@version --save
+		or
+	> npm install bootstrap@version --save
+
+    - To update angular bootstrap
+	> npm i @ng-bootstrap/ng-bootstrap@latest
+
+
+***************************************************************************************************************************
+
+
+---------------------------------------------------------
+4) Added boxed layout for both Vertical and Horizontal :-
+---------------------------------------------------------
+
+    - We have added boxed mode layout you can use boxed layout by adding class="boxed".
+    - We also provided seperate css file for boxed mode make sure that you also include the link accordingly.
+	To use boxed mode add the link in styles.scss
+	> @import "assets/css/boxed.css";
+	> @import "assets/css/dark-boxed.css";
+
+***************************************************************************************************************************
+
+---------------------------------------------------------
+5) Removed simple-datatables :-
+---------------------------------------------------------
+
+    We have removed simple datatable in the update.
+
+***************************************************************************************************************************
+
+				   ***Thank You***

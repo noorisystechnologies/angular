@@ -1,0 +1,101 @@
+
+Project Name: Spruha - Angular admin dashboard.
+
+Version : V.4
+
+Release Date: July 14th,2022.
+
+Update Details:
+
+1) Updated Angular version.
+
+2) Add new Pages.
+
+3) Updated 3rd party plugins.
+
+
+***************************************************************************************************************************
+
+1) Updated Angular version:
+------------------------------------------------
+
+   Process to convert Angular14
+
+	> npm install --save-dev @angular/cli@latest 
+	 It is used to update devDependencies
+
+	> ng update
+	 It will show the required dependencies which should need to be updated.
+		// Make sure that your global version is updated
+
+		use --force to ignore peer dependency version mismatches.
+		use --next for the prerelease version, including beta and RCs.
+
+	> npm i @angular/cdk
+	 It is used to update the angular cdk
+	
+
+    To Update 3rd party PlugIns just replace the package.json file and use CMD:
+
+	1) npm i
+		or
+	2) yarn install
+
+	Note: Some of the 3rd party plugins wont support latest version. So, Please use --force > npm install --force
+
+
+	> npm install bootstrap@latest --save
+
+    - To update angular bootstrap
+	> npm i @ng-bootstrap/ng-bootstrap@latest
+
+
+***********************************************************************************************************************************************************************************
+
+
+2) Add new Pages:
+-----------------
+
+	path: src/app/components/ecommerce
+
+		- added add-product and wishlist pages components
+
+	path: src/app/components/advanced-ui
+
+		- added notification and treeview pages components
+
+	path: src/app/components/apps
+
+		- added blog and filemanager pages components
+
+	path: src/app/components/apss/mail
+
+		- added mail-compose page component
+
+	path: src/app/components/forms
+
+		- added form-element-sizes page component
+
+	path: src/app/components/landingpage
+
+		- added landing page component
+
+	path: src/app/components/pages
+
+		- added aboutus and settings pages component
+
+	Note: Also there was modification in folder structure like mail, maps, tables, widgets icons are moved inside the apps folder and also accordion also moved to elements folder.
+
+***********************************************************************************************************************************************************************************
+
+3) Updated 3rd party plugins:
+-----------------------------
+
+	There was two plugins which have major change in coding.
+
+		1) @ks89/angular-modal-gallery
+
+		2) ng2-charts
+
+
+				   ***Thank You***
