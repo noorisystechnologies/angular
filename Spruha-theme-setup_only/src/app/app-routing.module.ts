@@ -9,6 +9,7 @@ import { Content_Routes,  Message_Routes } from './shared/routes/content.routes'
 import {  Full_Content_Routes } from './shared/routes/full-content.routes';
 import { landing_Routes } from './shared/routes/landingpage';
 import { Error404Component } from './components/custom/error404/error404.component';
+import { AuthGuard } from './shared/guard/auth.guard';
 
 const routes: Routes = [
   {
@@ -17,7 +18,7 @@ const routes: Routes = [
   },
   // { path: '', redirectTo: 'login', pathMatch: 'full' },
   // { path: 'login', component: AuthenticationComponent },
-  { path: '', component: FullLayoutComponent, children: Full_Content_Routes },
+  { path: '', component: FullLayoutComponent, children: Full_Content_Routes , canActivate:[AuthGuard]},
   { path: '', component: ContentLayoutComponent, children: Content_Routes },
   { path: '', component: MessageLayoutComponent, children: Message_Routes },
   { path: '', component: LandingpageLayoutComponent, children: landing_Routes },

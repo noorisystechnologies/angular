@@ -10,8 +10,18 @@ const routes: Routes = [
                 path: 'dashboard',
                 component: DashboardComponent
             },
+            {
+                path: 'notifications',
+                loadChildren: () => import('./notification/notification.module').then((m) => m.NotificationModule)
+            },
+            {
+                path: 'users',
+                loadChildren: () => import('./manage-users/manage-users.module').then((m) => m.ManageUsersModule)
+            }
         ],
-    }
+    },
+    
+
 ];
 @NgModule({
     imports: [RouterModule.forChild(routes)],

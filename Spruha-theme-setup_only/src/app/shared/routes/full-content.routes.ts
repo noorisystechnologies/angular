@@ -1,15 +1,16 @@
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from '../guard/auth.guard';
-
+import { RedirectAuthGuard } from '../guard/redirect-auth.guard';
+import { Role } from '../modals/role';
 //Route for content layout with sidebar, navbar and footer.
 
 export const Full_Content_Routes: Routes = [
     // { path : ''  , redirectTo : '', pathMatch: 'full' , canActivate : [ RedirectGuardService ] },
-    { path: '', redirectTo: '/home/dashboard', pathMatch: 'full', },
+    { path: '', redirectTo: '/dashboard', pathMatch: 'full', },
     // Without Authentication comment canActivate: [AuthGuard],
 
     {
-        path: 'home',
+        path: '',
         loadChildren: () => import('../../components/admin/dashboard.module').then(m => m.DashboardModule),
         canActivate:[AuthGuard],
         data : {

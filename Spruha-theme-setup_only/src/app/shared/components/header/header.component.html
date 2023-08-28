@@ -83,7 +83,7 @@
                         </div> -->
                         <!-- Theme-Layout light-dark-->
                         <!-- country  -->
-                        <div ngbDropdown class="main-header-notification flag-dropdown">
+                        <!-- <div ngbDropdown class="main-header-notification flag-dropdown">
                             <a ngbDropdownToggle class="nav-link icon country-Flag">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                     <circle cx="256" cy="256" r="256" fill="#f0f0f0" />
@@ -136,8 +136,22 @@
                                     </div>
                                 </a>
                             </div>
+                        </div> -->
+                        <div ngbDropdown class="main-header-notification flag-dropdown">
+                            <a ngbDropdownToggle class="nav-link icon country-Flag">
+                                <img *ngIf="flagvalue !== undefined" src="{{flagvalue}}" class="flag-img">
+                                <img *ngIf="flagvalue === undefined" src="{{defaultFlag}}" class="flag-img">
+                            </a>
+                            <div ngbDropdownMenu>
+                                <a href="javascript:void(0)" *ngFor="let item of listLang" ngbDropdownItem class="d-flex "
+                                    (click)="setLanguage(item.text, item.lang, item.flag)" [ngClass]="{'active': langStoreValue === item.lang}">
+                                    <span class="avatar  me-3 align-self-center bg-transparent"><img src="{{item.flag}}" alt="img"></span>
+                                    <div class="d-flex">
+                                        <span class="mt-2">{{item.text | translate}}</span>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-
                         <!-- country  end -->
                         <!-- Full screen -->
                         <div class="dropdown">
@@ -148,11 +162,12 @@
                         <!-- Full screen -->
                         <!-- Notification -->
                         <div ngbDropdown class="main-header-notification">
-                            <a ngbDropdownToggle class="nav-link icon" href="javascript:void(0)">
+                            <a ngbDropdownToggle class="nav-link icon" href="javascript:void(0)"
+                            routerLink="/notifications/notification-list">
                                 <i class="fe fe-bell header-icons"></i>
                                 <span class="badge bg-danger nav-link-badge">4</span>
                             </a>
-                            <div ngbDropdownMenu class="dropdown-menu">
+                            <!-- <div ngbDropdownMenu class="dropdown-menu">
                                 <div class="header-navheading">
                                     <p class="main-notification-text">You have 1 unread notification<span
                                             class="badge badge-pill bg-primary ms-3">View all</span></p>
@@ -186,7 +201,7 @@
                                 <div class="dropdown-footer">
                                     <a href="javascript:void(0)">View All Notifications</a>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                         <!-- Notification -->
                         <!-- Messages -->
@@ -211,6 +226,7 @@
                                 <a ngbDropdownItem class=" border-top" routerLink="/pages/profile">
                                     <i class="fe fe-user"></i> My Profile
                                 </a>
+                                
                                 <!-- <a ngbDropdownItem class="" routerLink="/pages/profile">
                                     <i class="fe fe-edit"></i> Edit Profile
                                 </a>
@@ -228,6 +244,7 @@
                                 </a>
                             </div>
                         </div>
+                        
                         <!-- Profile -->
                         <!-- Sidebar -->
                         <!-- <div class="dropdown  header-settings">

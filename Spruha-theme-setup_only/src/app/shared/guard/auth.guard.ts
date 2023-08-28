@@ -27,7 +27,7 @@ export class AuthGuard implements CanActivate {
     //     return true;
     //   }
     // }
-    if (localStorage.getItem('currentProviderUser')) {
+    if (localStorage.getItem('currentAgentUser')) {
       return true;
     }
 

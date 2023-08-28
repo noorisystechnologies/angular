@@ -27,6 +27,17 @@ export class SidemenuComponent implements OnInit {
   // To set Active on Load
   checkNavActiveOnLoad() {
     this.navServices.items.subscribe((menuItems: any) => {
+      // if (this.authService.currentUserValue) {
+      //   if (this.authService.currentUserValue.user_type == Role.subAdmin){
+      //     console.log(this.authService.currentUserValue.privileges)
+      //     let privileges = this.authService.currentUserValue.privileges?.map((x:any)=> x.privilege_id)
+      //     this.menuItems = menuItems.filter(
+      //       x => privileges?.includes(x.id)
+      //     )
+      //   } else {
+      //     this.menuItems = menuItems;
+      //   }
+      // }
       this.menuItems = menuItems;
 
       this.router.events.subscribe((event: any) => {
@@ -137,6 +148,9 @@ export class SidemenuComponent implements OnInit {
         menuItem.active = false;
         this.navServices.collapseSidebar = false;
       }
+      if (menuItem == item) {
+        menuItem.active = true;
+      }
       if (menuItem.children && menuItem.children.includes(item)) {
         menuItem.active = true;
       }
@@ -220,7 +234,8 @@ export class SidemenuComponent implements OnInit {
 
     fromEvent(window, 'resize').subscribe(() => {
       if (window.innerWidth >= 992) {
-        document.querySelector('body.horizontalmenu')?.classList.remove('main-sidebar-show');}
+        document.querySelector('body.horizontalmenu')?.classList.remove('main-sidebar-show');
+      }
       if (document.querySelector('body')?.classList.contains('horizontalmenu-hover') && window.innerWidth > 992) {
         let li = document.querySelectorAll('.menu-nav li');
         li.forEach((e, i) => {
@@ -235,20 +250,20 @@ export class SidemenuComponent implements OnInit {
 
     // detect screen size changes
     this.breakpointObserver.observe(['(max-width: 991px)']).subscribe((result: BreakpointState) => {
-        if (result.matches) {
-          // small screen
-          this.checkCurrentActive();
-        } else {
-          // large screen
-          document.querySelector('body.horizontalmenu')?.classList.remove('main-sidebar-show');
-          if (document.querySelector('.horizontalmenu:not(.horizontalmenu-hover)')) {
-            this.closeNavActive();
-            setTimeout(() => {
-              parentNavActive();
-            }, 100);
-          }
+      if (result.matches) {
+        // small screen
+        this.checkCurrentActive();
+      } else {
+        // large screen
+        document.querySelector('body.horizontalmenu')?.classList.remove('main-sidebar-show');
+        if (document.querySelector('.horizontalmenu:not(.horizontalmenu-hover)')) {
+          this.closeNavActive();
+          setTimeout(() => {
+            parentNavActive();
+          }, 100);
         }
-      });
+      }
+    });
 
     let vertical: any = document.querySelectorAll('#myonoffswitch01');
     let horizontal: any = document.querySelectorAll('#myonoffswitch02');
@@ -273,8 +288,8 @@ export class SidemenuComponent implements OnInit {
     fromEvent(maincontent, 'click').subscribe(() => {
       if (document.querySelector('body')?.classList.contains('horizontalmenu')) {
         this.closeNavActive();
-        
-        setTimeout(()=>{parentNavActive()}, 100)
+
+        setTimeout(() => { parentNavActive() }, 100)
       }
     });
   }

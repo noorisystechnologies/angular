@@ -25,8 +25,9 @@ import { NgxUiLoaderModule, NgxUiLoaderHttpModule } from "ngx-ui-loader";
 import { AgmCoreModule } from '@agm/core';
 import { ErrorInterceptor } from './shared/interceptor/error.interceptor';
 import { HeaderInterceptor } from './shared/interceptor/header.interceptor';
-import { AuthGuard } from './shared/auth.guard';
+
 import { AgentProfileComponent } from './components/admin/agent-profile/agent-profile.component';
+import { AuthGuard } from './shared/guard/auth.guard';
 @NgModule({
   declarations: [
     AppComponent,

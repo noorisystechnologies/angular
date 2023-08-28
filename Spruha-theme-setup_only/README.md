@@ -1,3 +1,6 @@
+##  Modules in this theme setup
+https://docs.google.com/spreadsheets/d/1bLT-NojXxRq0u1LKTwOfz1nCGqZaFU1_UyItEevRU7o/edit?usp=sharing
+
 # Spruha
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
@@ -25,3 +28,4 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+

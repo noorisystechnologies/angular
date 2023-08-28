@@ -37,8 +37,8 @@ export class AuthService {
     let form_data = new FormData();
     form_data.append("email", data.email);
     form_data.append("password", data.password);
-    this.router.navigate(['/home/dashboard']);
-    localStorage.setItem('currentProviderUser', "1");
+    this.router.navigate(['/dashboard']);
+    localStorage.setItem('currentAgentUser', "1");
     // this.authAPIService.agentLogin(form_data)
     // 	.subscribe((res: any) => {
     // 		// console.log(res);

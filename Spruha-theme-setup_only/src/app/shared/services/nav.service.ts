@@ -5,6 +5,7 @@ import { takeUntil, debounceTime } from 'rxjs/operators';
 
 //Menu Bar
 export interface Menu {
+  id?: string;
   headTitle?: string;
   title?: string;
   path?: string;
@@ -54,13 +55,22 @@ export class NavService implements OnDestroy {
 
   MENUITEMS: Menu[] = [
     //title
-    { headTitle: 'dashboard' },
+    // { headTitle: 'dashboard' },
     {
-      path: 'home/dashboard',
+      id: '1',
+      path: '/dashboard',
       title: 'Dashboard',
       type: 'link',
-      icon: 'ti-home',
-      active: true,
+      icon: 'fa fa-home',
+      active: false,
+    },
+    {
+      id:'2',
+      path: '/users/users-list',
+      title: 'Manage Users',
+      type: 'link',
+      icon: 'ti-user',
+      active: false,
     },
     // {
     //   title: 'Crypto Currencies',

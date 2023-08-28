@@ -25,15 +25,16 @@ export class HeaderInterceptor implements HttpInterceptor {
     if (user) {
       request = request.clone({
         setHeaders: {
-          'Authorization': `Bearer ${this._global.authentication_token}`
+          'Authorization': `Bearer ${this._global.authentication_token}`,
+          // 'Accept-Language': localStorage.getItem('lang') ? localStorage.getItem('lang')! : 'fr'
         }
       })
     }
-    if (request.body instanceof FormData) {
-      request = request.clone({
-        body: request.body.append('lang', this.translate.currentLang)
-      })
-    }
+    // if (request.body instanceof FormData) {
+    //   request = request.clone({
+    //     body: request.body.append('lang', this.translate.currentLang)
+    //   })
+    // }
     return next.handle(request);
   }
 }

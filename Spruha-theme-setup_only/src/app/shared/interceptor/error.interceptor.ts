@@ -44,7 +44,7 @@ export class ErrorInterceptor implements HttpInterceptor {
               // text: this.translate.instant(error.error.message),
               text: this.translate.instant("Please login again to continue."),
               icon: 'info',
-              confirmButtonColor: '#FECC4E'
+              // confirmButtonColor: '#FECC4E'
             }).then(result => {
               localStorage.clear();
               this.router.navigate(['/auth/login']).then(() => {
@@ -63,7 +63,7 @@ export class ErrorInterceptor implements HttpInterceptor {
               // text: this.translate.instant(error.error.message),
               text: this.translate.instant(error.error.message),
               icon: 'info',
-              confirmButtonColor: '#FECC4E'
+              // confirmButtonColor: '#FECC4E'
             })
           }
           else {
@@ -77,7 +77,7 @@ export class ErrorInterceptor implements HttpInterceptor {
               title: this.translate.instant('Error!'),
               text: this.translate.instant(error.error.message || error.statusText),
               icon: 'error',
-              confirmButtonColor: '#FECC4E'
+              // confirmButtonColor: '#FECC4E'
             })
           }
           return throwError(() => new Error(error.error.message));

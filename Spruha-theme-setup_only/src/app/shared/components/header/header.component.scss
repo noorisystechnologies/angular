@@ -117,3 +117,21 @@
         }
     }
 }
+.flag-img {
+    min-width: 0;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    line-height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.switch_section input {
+    width: 1.5rem;
+    height: 1.5rem !important;
+    border-radius: 0.25rem;
+    outline: none;
+    border: none;
+    border: 1px solid #6259ca;
+    color: transparent;
+}
