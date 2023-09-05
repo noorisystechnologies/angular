@@ -5,6 +5,18 @@ https://docs.google.com/spreadsheets/d/1bLT-NojXxRq0u1LKTwOfz1nCGqZaFU1_UyItEevR
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
 
+## Ready Modules and templates
+Authentication module
+Localization Module (Multilingual)
+Notification Module 
+Dashboard
+Data Tables
+Form Wizard
+Modal
+User Module with
+1. User List with Filter, Search and Pagination from Frontend as well as backend(), user active Inactive functionality, delete functionality
+2. Add User Form with full validation, image upload preview and pdf upload preview  and multiple image upload.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.

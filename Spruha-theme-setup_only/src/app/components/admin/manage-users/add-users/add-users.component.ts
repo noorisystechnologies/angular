@@ -100,18 +100,6 @@ export class AddUsersComponent implements OnInit {
   /**get image file and url */
   getImage(event) {
     if (event.target.files.length > 0) {
-      if (event.target.files[0].type == 'image/jpeg' || event.target.files[0].type == 'image/jpg' || event.target.files[0].type == 'image/png') {
-      }
-      else {
-        Swal.fire(
-          this.translate.instant('Error!'),
-          this.translate.instant('Accept image only!'),
-          'error'
-        );
-        this.form.get('profile_img')?.setValue('')
-        this.image_result = '';
-        return
-      }
       const reader = new FileReader();
       reader.onload = e => this.image_result = reader.result;
       reader.readAsDataURL(event.target.files[0]);
@@ -135,6 +123,8 @@ export class AddUsersComponent implements OnInit {
       }
       const reader = new FileReader();
       reader.onload = e => this.pdf_result = reader.result;
+      console.log(this.pdf_result);
+      
       reader.readAsDataURL(event.target.files[0]);
       this.pdf_file = event.target.files[0];
     }

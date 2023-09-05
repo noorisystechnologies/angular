@@ -137,7 +137,7 @@
                                 </a>
                             </div>
                         </div> -->
-                        <div ngbDropdown class="main-header-notification flag-dropdown">
+                        <!-- <div ngbDropdown class="main-header-notification flag-dropdown">
                             <a ngbDropdownToggle class="nav-link icon country-Flag">
                                 <img *ngIf="flagvalue !== undefined" src="{{flagvalue}}" class="flag-img">
                                 <img *ngIf="flagvalue === undefined" src="{{defaultFlag}}" class="flag-img">
@@ -148,6 +148,41 @@
                                     <span class="avatar  me-3 align-self-center bg-transparent"><img src="{{item.flag}}" alt="img"></span>
                                     <div class="d-flex">
                                         <span class="mt-2">{{item.text | translate}}</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div> -->
+                        <div ngbDropdown class="main-header-notification flag-dropdown align-self-center">
+                            <a ngbDropdownToggle class="header-menu-dp icon country-Flag" href="javascript:;">
+                                <img *ngIf="flagvalue !== undefined" src="{{flagvalue}}" class="flag-img">
+                                <img *ngIf="flagvalue === undefined" src="{{defaultFlag}}" class="flag-img">
+                            </a>
+                            <div ngbDropdownMenu>
+                                <a id="myonoffswitch19" href="javascript:void(0)" ngbDropdownItem class="d-flex "
+                                    (click)="setLanguage(listLang[0].text, listLang[0].lang, listLang[0].flag)"
+                                    [ngClass]="{'active': langStoreValue === listLang[0].lang}">
+                                    <span class="avatar  me-3 align-self-center bg-transparent"><img src="{{listLang[0].flag}}"
+                                            alt="img"></span>
+                                    <div class="d-flex">
+                                        <span class="mt-2">{{listLang[0].text | translate}}</span>
+                                    </div>
+                                </a>
+                                <a id="myonoffswitch19" href="javascript:void(0)" ngbDropdownItem class="d-flex "
+                                    (click)="setLanguage(listLang[1].text, listLang[1].lang, listLang[1].flag)"
+                                    [ngClass]="{'active': langStoreValue === listLang[1].lang}">
+                                    <span class="avatar  me-3 align-self-center bg-transparent"><img src="{{listLang[1].flag}}"
+                                            alt="img"></span>
+                                    <div class="d-flex">
+                                        <span class="mt-2">{{listLang[1].text | translate}}</span>
+                                    </div>
+                                </a>
+                                <a id="myonoffswitch20" href="javascript:void(0)" ngbDropdownItem class="d-flex "
+                                    (click)="setLanguage(listLang[2].text, listLang[2].lang, listLang[2].flag)"
+                                    [ngClass]="{'active': langStoreValue === listLang[2].lang}">
+                                    <span class="avatar  me-3 align-self-center bg-transparent"><img src="{{listLang[2].flag}}"
+                                            alt="img"></span>
+                                    <div class="d-flex">
+                                        <span class="mt-2">{{listLang[2].text | translate}}</span>
                                     </div>
                                 </a>
                             </div>

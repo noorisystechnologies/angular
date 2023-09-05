@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { fromEvent } from 'rxjs';
 import { GlobalService } from './shared/services/global.service';
 
@@ -9,7 +9,8 @@ import { GlobalService } from './shared/services/global.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  browserLang
+  browserLang;
+  public textDirection: any;
   constructor(
     public translate: TranslateService,
     private _global: GlobalService,
@@ -32,6 +33,15 @@ export class AppComponent {
     //   localStorage.setItem("lang", 'fr');
     // }
     // translate.use(this.browserLang.match(/en|fr/) ? this.browserLang : "fr");
+
+    /**for Right to left functionality if language is arabic */
+    // this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
+    //   if (event.lang == 'ar') {
+    //     this.textDirection = 'rtl'
+    //   } else {
+    //     this.textDirection = 'ltr'
+    //   }
+    // })
   }
   ngOnInit() {
     fromEvent(window, 'load').subscribe(() => document.querySelector('#glb-loader')?.classList.remove('loaderShow'));
