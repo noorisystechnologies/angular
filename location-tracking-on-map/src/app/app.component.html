@@ -1,0 +1,77 @@
+<!-- <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map> -->
+
+<!-- First Map -->
+<div class="container">
+	<div class="card custom-card" style="margin: 16px;">
+		<div class="card-header">
+			<h4 class="text-center">Source To Destination Tracking</h4>
+		</div>
+		<div class="card-body">
+			<div class="row mb-3">
+				<div class="col-md-12">
+					<agm-map [latitude]="sourceLocation.lat" [longitude]="sourceLocation.lng" [zoom]="zoom">
+						<!-- <agm-marker [latitude]="sourceLocation.lat" [longitude]="sourceLocation.lng"></agm-marker>
+						<agm-marker [latitude]="destinationLocation.lat" [longitude]="destinationLocation.lng"></agm-marker> -->
+						<agm-direction [origin]="sourceLocation" [destination]="destinationLocation"
+						></agm-direction>
+					</agm-map>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Second Map-->
+<div class="container">
+	<div class="card custom-card" style="margin: 16px;">
+		<div class="card-header">
+			<h4 class="text-center">Source To Destination Tracking</h4>
+		</div>
+		<div class="card-body">
+			<div class="row mb-3">
+				<div class="col-md-12">
+					<agm-map [latitude]="lat" [longitude]="lng" [fullscreenControl]='true' [mapTypeControl]='true'
+						[fitBounds]="true">
+						<agm-marker *ngFor="let coordinate of start_end_mark; let i=index" [latitude]="coordinate[0]"
+							[longitude]="coordinate[1]" [agmFitBounds]="true"></agm-marker>
+						<agm-polyline [visible]="true" [strokeWeight]="3" [strokeColor]="'#07b57a'">
+							<agm-polyline-point *ngFor="let coordinate of latlng; let i=index"
+								[latitude]="coordinate[0]" [longitude]="coordinate[1]">
+
+							</agm-polyline-point>
+						</agm-polyline>
+					</agm-map>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Third Map -->
+<div class="container">
+	<div class="card custom-card" style="margin: 16px;">
+		<div class="card-header">
+			<h4 class="text-center">Source To Destination Tracking</h4>
+		</div>
+		<div class="card-body">
+			<div class="row mb-3">
+				<div class="col-md-12">
+					<div *ngIf="latitude !== undefined && longitude !== undefined">
+						<p>Latitude: {{ latitude }}</p>
+						<p>Longitude: {{ longitude }}</p>
+						<agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
+							<!-- <agm-marker [latitude]="sourceLocation.lat" [longitude]="sourceLocation.lng"></agm-marker>
+							<agm-marker [latitude]="destinationLocation.lat" [longitude]="destinationLocation.lng"></agm-marker> -->
+							<agm-direction [origin]="sourceLocation3" [destination]="destinationLocation3"></agm-direction>
+						</agm-map>
+					  </div>
+					  <div *ngIf="latitude === undefined || longitude === undefined">
+						<p>Getting location...</p>
+					  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
