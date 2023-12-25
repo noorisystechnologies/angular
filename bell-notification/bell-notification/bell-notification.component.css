@@ -1,0 +1,22 @@
+.dropdown .user-profile img {
+   width: 50px;
+   height: 50px;
+   border-radius: 6px;
+   object-fit: cover;
+}
+
+.dropstart .dropdown-menu {
+   right: 0;
+   top: 45px;
+}
+
+.dropdown-toggle .badge {
+   position: absolute;
+   left: 10px;
+   padding: 0.35em 0.50em;
+   border-radius: 50px;
+}
+
+.dropdown-toggle::before {
+   display: none !important;
+}

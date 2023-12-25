@@ -1,0 +1,68 @@
+/* You can add global styles to this file, and also import other style files */
+
+$gutter: 1rem; //for primeflex grid system
+@import "assets/layout/styles/layout/layout.scss";
+
+/* PrimeNG */
+@import "../node_modules/primeng/resources/primeng.min.css";
+@import "../node_modules/primeflex/primeflex.scss";
+@import "../node_modules/primeicons/primeicons.css";
+
+/* Demos */
+@import "assets/demo/styles/flags/flags.css";
+@import "assets/demo/styles/badges.scss";
+@import "assets/demo/styles/code.scss";
+
+
+
+:root {
+    --background-color: #eaedf7;
+    --text-color: #333;
+    --card-background: #fff;
+    --border-color:#fff;
+    --card-text-color: #333;
+    --nav-background-light: #fff;
+    --nav-text-color-light: #333;
+    --nav-background-dark: #343a40;
+    --nav-text-color-dark: #fff;
+  }
+  
+  [data-theme='dark'] {
+    --background-color: #24243e;
+    --text-color: #fff;
+    --card-background: #0e0e23;
+    --card-text-color: #fff;
+    --border-color:#333;
+    --nav-background-light: #343a40;
+    --nav-text-color-light: #fff;
+    --nav-background-dark: #0e0e23;
+    --nav-text-color-dark: #fff;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  .card {
+    display: block;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-background, black);
+    color: var(--card-text-color, #333);
+  }
+  
+  .nav {
+    background-color: var(--nav-background-light);
+    color: var(--nav-text-color-light);
+  }
+  
+  [data-theme='dark'] .nav {
+    background-color: var(--nav-background-dark);
+    color: var(--nav-text-color-dark);
+  }
+  p-table {
+    border: 1px solid var(--border-color);
+    background-color: var(--card-background, black);
+    color: var(--card-text-color, #333);
+  }

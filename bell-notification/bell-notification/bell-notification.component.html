@@ -1,0 +1,28 @@
+<div class="dropdown dropstart">
+   <a class="dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+      aria-expanded="false">
+      <div class="position-relative">
+         <i class="bi bi-bell fs-4"></i>
+         <span class="badge bg-danger">3</span>
+      </div>
+   </a>
+   <ul class="dropdown-menu dropdown-menu-light dropdown-menu-start" style="width: 22rem;"
+      aria-labelledby="navbarDarkDropdownMenuLink">
+      <li class="border-bottom" *ngFor="let item of notifications; let i = index">
+         <a class="dropdown-item" href="#">
+            <div class="d-flex w-100 gap-2">
+               <div class="user-profile">
+                  <img [src]="item.image" alt="Notification Image" class="notification-image">
+               </div>
+               <div class="text-wrap">
+                  <h6 class="mb-1">{{item.title}}</h6>
+                  <small class="text-muted">{{item.date}}</small>
+               </div>
+            </div>
+         </a>
+      </li>
+      <li class="text-center">
+         <a class="dropdown-item mt-2" href="javascript(0);">View All Notification</a>
+      </li>
+   </ul>
+</div>

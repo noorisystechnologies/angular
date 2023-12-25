@@ -1,0 +1,16 @@
+How use 
+
+(Note: This is zip file extract using Extract here option, in bell-notification folder html, css and ts file will be extracted)
+
+1. Ensure you have the BellNotificationComponent file in your project.
+2. Import the component in the module where you want to use it.
+
+import { BellNotificationComponent } from 'path-to-bell-notification-component';
+
+
+3. Place the <app-bell-notification></app-bell-notification> tag in your HTML file where you want the notification bell to appear.
+
+<app-bell-notification></app-bell-notification>
+
+
+4. Copy the HTML, CSS And Define your notification array in TS file

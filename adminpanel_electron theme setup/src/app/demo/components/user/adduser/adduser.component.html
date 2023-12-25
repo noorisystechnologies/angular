@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="card">
+        
+        <form [formGroup]="addUser">
+            <div class="row">
+                <div class="col-md-6 col-lg-6 col-sm-6">
+                    <div class="form-group mt-2">
+                        <label for="">First Name</label>
+                        <input type="text" formControlName="fname" class="form-control" name="" id=""
+                            [ngClass]="{'has-success': addUser.get('fname')?.valid}">
+                        <ng-container class="invalid mt-1"
+                            *ngIf="addUser.get('fname')?.hasError('required') && (addUser.get('fname')?.touched || addUser.get('fname')?.dirty) ">
+                            <small class="text-danger">Please Enter First Name</small>
+                        </ng-container>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-sm-6">
+                    <div class="form-group mt-2">
+                        <label for="">Last Name</label>
+                        <input type="text" formControlName="lname" class="form-control" name="" id=""
+                            [ngClass]="{'has-success': addUser.get('lname')?.valid}">
+                        <ng-container class="invalid mt-1"
+                            *ngIf="addUser.get('lname')?.hasError('required') && (addUser.get('lname')?.touched || addUser.get('lname')?.dirty) ">
+                            <small class="text-danger">Please Enter Last Name</small>
+                        </ng-container>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-sm-6">
+                    <div class="form-group mt-3">
+                        <label for="">Email</label>
+                        <input type="text" formControlName="email" class="form-control" name="" id=""
+                            [ngClass]="{'has-success': addUser.get('email')?.valid}">
+                        <ng-container class="invalid mt-1"
+                            *ngIf="addUser.get('email')?.hasError('required') && (addUser.get('email')?.touched || addUser.get('email')?.dirty) ">
+                            <small class="text-danger">Please Enter Email</small>
+                        </ng-container>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-sm-6">
+                    <div class="form-group mt-3">
+                        <label for="">Password</label>
+                        <input type="text" formControlName="password" class="form-control" name="" id=""
+                            [ngClass]="{'has-success': addUser.get('password')?.valid}">
+                        <ng-container class="invalid mt-1"
+                            *ngIf="addUser.get('password')?.hasError('required') && (addUser.get('password')?.touched || addUser.get('password')?.dirty) ">
+                            <small class="text-danger">Please Enter Password</small>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12 text-center mt-3">
+                <button class="btn btn-success" (click)="onSubmit()">Submit</button>
+            </div>           
+        </div>
+    </div>
+</div>

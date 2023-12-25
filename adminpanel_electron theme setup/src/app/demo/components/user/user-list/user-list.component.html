@@ -1,0 +1,82 @@
+<div class="container">
+    <div class="card">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12 text-end">
+                <button class="btn btn-primary" routerLink="/dashboard/user/add_user">Add User</button>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let user of users ; let i = index">
+                    <th scope="row">{{i+1}}</th>
+                    <td>{{ user.fname }}</td>
+                    <td>{{ user.lname }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>
+                        <i  pTooltip="Edit" tooltipPosition="top" class="pi pi-pencil" (click)="showDialog(user.id)"></i>&nbsp;
+                        <i  pTooltip="Delete" tooltipPosition="top" class="pi pi-trash" (click)="delete(user.id)"></i>
+                    </td>
+                  </tr>
+                  <!-- <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>jacob@gmail.com</td>
+                    <td>
+                        <i  pTooltip="Edit" tooltipPosition="top" class="pi pi-pencil" (click)="showDialog()"></i>&nbsp;
+                        <i  pTooltip="Delete" tooltipPosition="top" class="pi pi-trash"></i>
+                    </td>
+                  </tr>               -->
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+
+<!-- Dialog For Edit User -->
+<p-dialog header="Edit A User" [(visible)]="visible" [breakpoints]="{ '960px': '75vw' }" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false">
+   <form [formGroup]="editForm">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group">
+                <label for="">First Name</label>
+                <input type="text" formControlName="fname" class="form-control" name="" id="">
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group">
+                <label for="">Last Name</label>
+                <input type="text" formControlName="lname" class="form-control" name="" id="">
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group">
+                <label for="">Email</label>
+                <input type="text" formControlName="email" class="form-control" name="" id="">
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group">
+                <label for="">Password</label>
+                <input type="text" formControlName="password" class="form-control" name="" id="">
+            </div>
+        </div>
+    </div>
+   </form>
+   <div class="row mt-3">
+    <div class="col-md-12-col-sm-12 text-end">
+        <button class="btn btn-primary" (click)="update()">Update</button> &nbsp;
+        <button class="btn btn-danger" (click)="cancel()">Cancel</button>
+    </div>
+   </div>
+</p-dialog>

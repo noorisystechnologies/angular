@@ -1,0 +1,18 @@
+{
+    "Chart": 
+      {
+        "data": {
+          "labels": ["January", "February", "March", "April", "May", "June", "July"],
+          "datasets": [
+            {
+              "label": "Raza Tex",
+              "data": [28, 48, 40, 19, 86, 27, 90]
+            },
+            {
+              "label": "Raza Seals Agency",
+              "data": [70, 59, 80, 81, 56, 55, 40]
+            }
+          ]
+        }
+      }      
+  }
